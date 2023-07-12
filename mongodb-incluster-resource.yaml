@@ -6,18 +6,18 @@ driver_inputs:
   values:
     templates:
       cookie: |
-        username:     {{ .init.rootUsername }}
+        rootUsername: {{ .init.rootUsername }}
         name:         {{ .init.name }}
         rootPassword: {{ .init.rootPassword }}
         port:         {{ .init.port }}
       init: |-
         {{- if .cookie}}
-        username:     {{ .cookie.rootUsername }}
+        rootUsername: {{ .cookie.rootUsername }}
         name:         {{ .cookie.name }}
         rootPassword: {{ .cookie.rootPassword }}
         port:         {{ .cookie.port }}
         {{- else }}
-        username:     {{ randAlpha 8 | lower | quote }}
+        rootUsername: {{ randAlpha 8 | lower | quote }}
         rootPassword: {{ randAlphaNum 16 | quote }}
         name:         db_{{ randAlpha 10}}
         port:         27017
