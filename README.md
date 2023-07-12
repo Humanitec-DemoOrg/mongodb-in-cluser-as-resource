@@ -5,7 +5,7 @@ export HUMANITEC_ORG=FIXME
 export HUMANITEC_TOKEN=FIXME
 ```
 
-As Platform Admain, define an in-cluster `mongodb` resource:
+As Platform Admin, define an in-cluster `mongodb` resource:
 ```bash
 yq -o json mongodb-incluster-resource.yaml > mongodb-incluster-resource.json
 curl "https://api.humanitec.io/orgs/${HUMANITEC_ORG}/resources/defs" \
