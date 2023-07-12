@@ -79,6 +79,6 @@ driver_inputs:
             data:
               MONGO_INITDB_ROOT_PASSWORD: {{ .init.rootPassword | b64enc }}
       outputs: |
-        connection: mongodb://{{ .init.rootUsername }}:{{ .init.password }}@{{ .init.id }}:{{ .init.port }}/
+        connection: mongodb://{{ .init.rootUsername }}:{{ .init.rootPassword }}@{{ .init.id }}:{{ .init.port }}/
 criteria:
   - {}
