@@ -7,7 +7,9 @@ containers:
     variables:
       ME_CONFIG_MONGODB_URL: "${resources.mongodb.connection}"
 resources:
-  mongodb:
+  dns: 
+    type: dns
+  mongodb: 
     type: mongodb
     properties:
       connection:
