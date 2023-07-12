@@ -1,0 +1,18 @@
+apiVersion: score.dev/v1b1
+metadata:
+  name: frontend
+containers:
+  cartservice:
+    image: mongo-express:latest
+    variables:
+      ME_CONFIG_MONGODB_URL: "${externals.mongodb.connection}"
+resources:
+  mongodb:
+    type: mongodb
+    properties:
+      connection:
+service:
+  ports:
+    tcp:
+      port: 8081
+      targetPort: 8081
