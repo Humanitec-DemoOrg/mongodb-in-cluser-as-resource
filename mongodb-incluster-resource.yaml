@@ -6,15 +6,13 @@ driver_inputs:
   values:
     templates:
       cookie: |
-        username:     {{ .init.username }}
-        password:     {{ .init.password }}
+        username:     {{ .init.rootUsername }}
         name:         {{ .init.name }}
         rootPassword: {{ .init.rootPassword }}
         port:         {{ .init.port }}
       init: |-
         {{- if .cookie}}
-        username:     {{ .cookie.username }}
-        password:     {{ .cookie.password }}
+        username:     {{ .cookie.rootUsername }}
         name:         {{ .cookie.name }}
         rootPassword: {{ .cookie.rootPassword }}
         port:         {{ .cookie.port }}
@@ -49,7 +47,7 @@ driver_inputs:
                     - containerPort: {{ .init.port }}
                     env:
                     - name: MONGO_INITDB_ROOT_USERNAME
-                      value: {{ .init.username }}
+                      value: {{ .init.rootUsername }}
                     - name: MONGO_INITDB_ROOT_PASSWORD
                       valueFrom:
                         secretKeyRef:
@@ -79,8 +77,8 @@ driver_inputs:
               name: {{ .init.id }}
             type: Opaque
             data:
-              MONGO_INITDB_ROOT_PASSWORD: {{ .init.password | b64enc }}
+              MONGO_INITDB_ROOT_PASSWORD: {{ .init.rootPassword | b64enc }}
       outputs: |
-        connection: mongodb://{{ .init.username }}:{{ .init.password }}@{{ .init.id }}:{{ .init.port }}/
+        connection: mongodb://{{ .init.rootUsername }}:{{ .init.password }}@{{ .init.id }}:{{ .init.port }}/
 criteria:
   - {}
