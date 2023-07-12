@@ -2,7 +2,7 @@ apiVersion: score.dev/v1b1
 metadata:
   name: frontend
 containers:
-  cartservice:
+  frontend:
     image: mongo-express:latest
     variables:
       ME_CONFIG_MONGODB_URL: "${resources.mongodb.connection}"
