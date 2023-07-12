@@ -18,7 +18,7 @@ driver_inputs:
         port:         {{ .cookie.port }}
         {{- else }}
         username:     {{ randAlpha 8 | lower | quote }}
-        password:     {{ randAlphaNum 16 | quote }}
+        rootPassword: {{ randAlphaNum 16 | quote }}
         name:         db_{{ randAlpha 10}}
         port:         27017
         {{- end }}
