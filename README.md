@@ -5,6 +5,7 @@ export HUMANITEC_ORG=FIXME
 export HUMANITEC_TOKEN=FIXME
 ```
 
+Deploy the frontend app talking to the `mongodb` resource:
 ```bash
 ENVIRONMENT=development
 
