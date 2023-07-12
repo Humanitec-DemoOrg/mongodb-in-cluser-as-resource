@@ -1,4 +1,4 @@
-# mongodb-in-cluser-as-resource
+# mongodb-in-cluster-as-resource
 
 ```bash
 export HUMANITEC_ORG=FIXME
