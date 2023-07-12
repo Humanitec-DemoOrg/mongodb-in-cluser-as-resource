@@ -5,7 +5,7 @@ containers:
   cartservice:
     image: mongo-express:latest
     variables:
-      ME_CONFIG_MONGODB_URL: "${externals.mongodb.connection}"
+      ME_CONFIG_MONGODB_URL: "${resources.mongodb.connection}"
 resources:
   mongodb:
     type: mongodb
