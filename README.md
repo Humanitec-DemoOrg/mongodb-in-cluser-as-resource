@@ -18,6 +18,7 @@ curl "https://api.humanitec.io/orgs/${HUMANITEC_ORG}/resources/defs" \
 As Developer, deploy the frontend app talking to the `mongodb` resource:
 ```bash
 ENVIRONMENT=development
+MONGO_APP=your-mongo-app
 
 score-humanitec delta \
     --app ${MONGO_APP} \
