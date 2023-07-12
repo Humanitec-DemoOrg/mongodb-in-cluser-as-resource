@@ -21,6 +21,7 @@ ENVIRONMENT=development
 MONGO_APP=your-mongo-app
 
 score-humanitec delta \
+    --deploy \
     --app ${MONGO_APP} \
     --env ${ENVIRONMENT} \
     --org ${HUMANITEC_ORG} \
