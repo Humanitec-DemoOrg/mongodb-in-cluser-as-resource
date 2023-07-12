@@ -1,0 +1,1 @@
+# mongodb-in-cluser-as-resource
