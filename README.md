@@ -8,7 +8,7 @@ export HUMANITEC_TOKEN=FIXME
 As Platform Admin, define an in-cluster `mongodb` resource:
 ```bash
 humctl create \
-    -f resources/mongodb-incluster-resource.yaml
+    -f mongodb-incluster-resource.yaml
 ```
 
 As Developer, deploy the frontend app talking to the `mongodb` resource:
