@@ -7,12 +7,8 @@ export HUMANITEC_TOKEN=FIXME
 
 As Platform Admin, define an in-cluster `mongodb` resource:
 ```bash
-yq -o json mongodb-incluster-resource.yaml > mongodb-incluster-resource.json
-curl "https://api.humanitec.io/orgs/${HUMANITEC_ORG}/resources/defs" \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer ${HUMANITEC_TOKEN}" \
-    -d @mongodb-incluster-resource.json
+humctl create \
+    -f resources/mongodb-incluster-resource.yaml
 ```
 
 As Developer, deploy the frontend app talking to the `mongodb` resource:

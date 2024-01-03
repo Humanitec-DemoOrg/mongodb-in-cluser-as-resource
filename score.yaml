@@ -9,10 +9,14 @@ containers:
 resources:
   dns: 
     type: dns
+  route:
+    type: route
+    params:
+      host: ${resources.dns.host}
+      path: /
+      port: 8081
   mongodb: 
     type: mongodb
-    properties:
-      connection:
 service:
   ports:
     tcp:
