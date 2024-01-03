@@ -23,6 +23,5 @@ score-humanitec delta \
     --org ${HUMANITEC_ORG} \
     --token ${HUMANITEC_TOKEN} \
     --retry \
-    -f score.yaml \
-    --extensions humanitec.score.yaml
+    -f score.yaml
 ```
