@@ -82,7 +82,7 @@ entity:
               type: Opaque
               data:
                 MONGO_INITDB_ROOT_PASSWORD: {{ .init.rootPassword | b64enc }}
-        outputs: |
+        secrets: |
           connection: mongodb://{{ .init.rootUsername }}:{{ .init.rootPassword }}@{{ .init.id }}:{{ .init.port }}/
   criteria:
     - {}
