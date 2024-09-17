@@ -1,3 +1,5 @@
+_Archiving for now, because will be soon moved to https://github.com/humanitec-architecture/resource-packs-in-cluster._
+
 # mongodb-in-cluster-as-resource
 
 ```bash
